@@ -1,0 +1,7 @@
+### TOML config file for Jupytext
+
+# Always pair ipynb notebooks to py:percent files
+formats = "ipynb,.nb.py:percent"
+cell_metadata_filter = "docutools, -ExecuteTime, -execute, -execution"
+notebook_metadata_filter = "docutools, tags, -jupytext.text_representation.jupytext_version"
+outdated_text_notebook_margin = 123456789

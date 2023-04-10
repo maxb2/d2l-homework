@@ -1,0 +1,19 @@
+### pre-commit framework for running git hooks
+### https://pre-commit.com
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0  # Use the ref you want to point at
+    hooks:
+      - id: check-added-large-files
+        args: ['--maxkb=2000', '--enforce-all']
+      - id: check-merge-conflict
+    ### Optional hooks
+    #   - id: no-commit-to-branch
+
+  ### Only needed if notebooks are committed directly
+  # - repo: https://github.com/datarootsio/databooks
+  #   rev: 1.0.5
+  #   hooks:
+  #   - id: databooks-meta
+  #     args: ["--no-rm-outs", "--rm-exec", "--cell-meta-keep", "docutools", "--nb-meta-keep", "docutools,kernelspec"]
